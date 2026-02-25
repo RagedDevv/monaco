@@ -2613,6 +2613,10 @@ function setupAutosave() {
 			});
 
 			editor = monaco.editor.create(document.getElementById('container'), {
+				scrollbar: {
+	    			vertical: 'hidden',
+	    			horizontal: 'hidden'
+				},   
 				language: 'lua',
 				theme: "net-theme-dark",
 				acceptSuggestionOnEnter: "smart",
@@ -2838,6 +2842,7 @@ function setupAutosave() {
 </body>
 
 </html>
+
 
 
 
