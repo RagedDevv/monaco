@@ -2613,10 +2613,12 @@ function setupAutosave() {
 			});
 
 			editor = monaco.editor.create(document.getElementById('container'), {
+				hideCursorInOverviewRuler: true,
 				scrollbar: {
 	    			vertical: 'hidden',
 	    			horizontal: 'hidden'
 				},   
+				overviewRulerLanes: false,
 				language: 'lua',
 				theme: "net-theme-dark",
 				acceptSuggestionOnEnter: "smart",
@@ -2842,6 +2844,7 @@ function setupAutosave() {
 </body>
 
 </html>
+
 
 
 
