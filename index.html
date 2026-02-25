@@ -2347,6 +2347,17 @@
               'vs': 'vs'
           }
       });
+	document.addEventListener('DOMContentLoaded', () => {
+	    const tabsContainer = document.getElementById('tabs-container');
+	
+	    tabsContainer.addEventListener('wheel', (evt) => {
+	        // Only trigger if there is actual horizontal overflow
+	        if (tabsContainer.scrollWidth > tabsContainer.clientWidth) {
+	            evt.preventDefault();
+	            tabsContainer.scrollLeft += evt.deltaY;
+	        }
+	    }, { passive: false });
+	});
 
       let editor;
       let Proposals = [];
@@ -2846,6 +2857,7 @@ function setupAutosave() {
 </body>
 
 </html>
+
 
 
 
